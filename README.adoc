@@ -1,0 +1,11 @@
+= DeskOS Live Media
+
+This repository contains Kickstarts and other scripts to produce DeskOS LiveDVD.
+
+To reproduce a custom live media spin you'll need:
+
+- A DeskOS 7 (or el7) machine
+- root or sudo access
+- livecd-tools package
+
+Change the path in the kickstart to the nearest mirror.

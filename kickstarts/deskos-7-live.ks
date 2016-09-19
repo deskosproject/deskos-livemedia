@@ -42,7 +42,6 @@ repo --name=deskos-testing --baseurl=https://dl.deskosproject.org/pub/deskos/tes
 @x11
 @internet-applications
 @office-suite
-@remote-desktop-clients
 @gnome-apps
 -libvirt
 -gnome-boxes
@@ -63,15 +62,7 @@ shim
 
 # DeskOS packages
 deskos-release
-deskos-backgrounds-gnome
-deskos-gnome-theme
-deskos-icon-theme
-deskos-logos
-deskos-settings-gnome
-freetype-freeworld
-gnome-shell-theme-deskos
-plymouth-theme-deskos
-thunderbird-es-configuration
+deskos-desktop
 vlc
 
 # DeskOS dependencies

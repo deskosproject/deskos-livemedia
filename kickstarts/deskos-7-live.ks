@@ -73,8 +73,12 @@ ntfs-3g
 ntfsprogs
 
 # DeskOS excluded packages
--abrt
+-abrt*
 -evolution
+-evolution-ews
+-evolution-help
+-evolution-mapi
+-gnome-abrt
 -gnome-classic-session
 -initial-setup
 -initial-setup-gui

@@ -82,6 +82,8 @@ ntfsprogs
 -gnome-classic-session
 -initial-setup
 -initial-setup-gui
+-plymouth-system-theme
+-plymouth-theme-charge
 
 %end
 
@@ -357,8 +359,8 @@ if [ -e /usr/share/icons/hicolor/96x96/apps/fedora-logo-icon.png ] ; then
 fi
 
 # don't run gnome-initial-setup
-#mkdir ~liveuser/.config
-#touch ~liveuser/.config/gnome-initial-setup-done
+mkdir ~liveuser/.config
+touch ~liveuser/.config/gnome-initial-setup-done
 
 # make the installer show up
 if [ -f /usr/share/applications/liveinst.desktop ]; then

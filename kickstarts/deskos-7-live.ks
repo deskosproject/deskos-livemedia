@@ -68,9 +68,11 @@ vlc
 # DeskOS dependencies
 epel-release
 gnome-shell-extension-user-theme
+hplip
 libreoffice-langpack-es
 ntfs-3g
 ntfsprogs
+subscription-manager
 
 # DeskOS excluded packages
 -abrt*

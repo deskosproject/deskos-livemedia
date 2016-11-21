@@ -1,16 +1,15 @@
 lang es_EC.UTF-8
 keyboard us
 timezone America/Guayaquil --isUtc
-auth --useshadow --enablemd5
+auth --passalgo=sha512
 selinux --enforcing
 firewall --enabled --service=mdns
 xconfig --startxonboot
 part / --size 8192 --fstype ext4
 services --enabled=NetworkManager --disabled=network,sshd
 
-
 # Root password
-rootpw --iscrypted $6$vc6X1h8u4su1pQF/$ADihazf21AR2UUgOl/DVBa4GdrSTertqSZXyQzONP.4RSOWB7GQ/qqBfW0B0qMecBVp.JkZiSet9/gY9j1TqC.
+rootpw --iscrypted $6$jFghcDeJw8x7qX0K$UxgCiuvyLTL1w8P87QMLNSkXuMdaxenbmpU9YOzGQ3PG3hMHf278c3OZPj/TWYGzcFKjp8tgm2I16ik4ZEiQj.
 
 # CentOS 7.2.1511 Repos
 repo --name=base --baseurl=http://mirror.centos.org/centos/7.2.1511/os/x86_64/
@@ -22,35 +21,27 @@ repo --name=epel --baseurl=http://download.fedoraproject.org/pub/epel/7/x86_64/
 
 # DeskOS Repos
 repo --name=deskos --baseurl=https://dl.deskosproject.org/pub/deskos/releases/7/x86_64/
-repo --name=deskos-testing --baseurl=https://dl.deskosproject.org/pub/deskos/testing/7/x86_64/
 
 %packages
 @base
 @core
-@dial-up
 @directory-client
 @fonts
+@gnome-apps
 @gnome-desktop
 @guest-agents
 @guest-desktop-agents
-@input-methods
+@internet-applications
 @internet-browser
 @java-platform
 @multimedia
 @network-file-system-client
+@office-suite
 @print-client
 @x11
-@internet-applications
-@office-suite
-@gnome-apps
--libvirt
--gnome-boxes
 
-
-#Live install tools
+# Live install tools
 anaconda
-system-config-keyboard
-system-config-language
 firefox
 patch
 
@@ -63,29 +54,73 @@ shim
 # DeskOS packages
 deskos-release
 deskos-desktop
-vlc
 
 # DeskOS dependencies
+bash-completion
+cups-bjnp
+deja-dup
 epel-release
+epson-inkjet-printer-escpr
+exfat-utils
+ffmpegthumbnailer
+fuse-exfat
+gnome-getting-started-docs-es
+gnome-mplayer
 gnome-shell-extension-user-theme
+google-chrome-release
+gthumb
 hplip
 libreoffice-langpack-es
+mypaint
 ntfs-3g
 ntfsprogs
+pcsc-lite
+pcsc-lite-ccid
 subscription-manager
+tmux
+unrar
+vim
+NetworkManager-l2tp-gnome
+NetworkManager-libreswan-gnome
+NetworkManager-openvpn-gnome
+NetworkManager-pptp-gnome
+NetworkManager-strongswan-gnome
+NetworkManager-vpnc-gnome
+NetworkManager-wifi
 
 # DeskOS excluded packages
 -abrt*
+-ekiga
 -evolution
 -evolution-ews
 -evolution-help
 -evolution-mapi
+-firewall-config
+-glusterfs-fuse
 -gnome-abrt
+-gnome-boxes
 -gnome-classic-session
+-gnome-disk-utility
+-gnome-packagekit-updater
+-gnome-system-log
+-gnome-tweak-tool
+-icedtea-web
 -initial-setup
 -initial-setup-gui
+-java-1.7.0-openjdk
+-java-1.7.0-openjdk-headless
+-orca
 -plymouth-system-theme
 -plymouth-theme-charge
+-postfix
+-rsyslog
+-setroubleshoot
+-setroubleshoot-plugins
+-setroubleshoot-server
+-shotwell
+-system-config-printer
+-totem
+-totem-nautilus
 
 %end
 

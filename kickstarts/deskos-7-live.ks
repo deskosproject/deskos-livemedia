@@ -11,16 +11,17 @@ services --enabled=NetworkManager --disabled=network,sshd
 # Root password
 rootpw --iscrypted $6$jFghcDeJw8x7qX0K$UxgCiuvyLTL1w8P87QMLNSkXuMdaxenbmpU9YOzGQ3PG3hMHf278c3OZPj/TWYGzcFKjp8tgm2I16ik4ZEiQj.
 
-# CentOS 7.2.1511 Repos
-repo --name=base --baseurl=http://mirror.centos.org/centos/7.2.1511/os/x86_64/
-repo --name=updates --baseurl=http://mirror.centos.org/centos/7.2.1511/updates/x86_64/
-repo --name=extras --baseurl=http://mirror.centos.org/centos/7.2.1511/extras/x86_64/
+# CentOS 7.3.1611 Repos
+repo --name=base --baseurl=http://mirror.centos.org/centos/7.3.1611/os/x86_64/
+repo --name=updates --baseurl=http://mirror.centos.org/centos/7.3.1611/updates/x86_64/
+repo --name=extras --baseurl=http://mirror.centos.org/centos/7.3.1611/extras/x86_64/
 
 # EPEL Repo
 repo --name=epel --baseurl=http://download.fedoraproject.org/pub/epel/7/x86_64/
 
 # DeskOS Repos
 repo --name=deskos --baseurl=https://dl.deskosproject.org/pub/deskos/releases/7/x86_64/
+#repo --name=deskos-testing --baseurl=https://dl.deskosproject.org/pub/deskos/testing/7/x86_64/
 
 %packages
 @base
@@ -76,6 +77,7 @@ ntfs-3g
 ntfsprogs
 pcsc-lite
 pcsc-lite-ccid
+shutter
 subscription-manager
 tmux
 unrar
@@ -86,7 +88,6 @@ NetworkManager-openvpn-gnome
 NetworkManager-pptp-gnome
 NetworkManager-strongswan-gnome
 NetworkManager-vpnc-gnome
-NetworkManager-wifi
 
 # DeskOS excluded packages
 -abrt*
@@ -101,7 +102,6 @@ NetworkManager-wifi
 -gnome-boxes
 -gnome-classic-session
 -gnome-disk-utility
--gnome-packagekit-updater
 -gnome-system-log
 -gnome-tweak-tool
 -icedtea-web

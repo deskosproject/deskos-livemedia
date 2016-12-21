@@ -82,12 +82,6 @@ subscription-manager
 tmux
 unrar
 vim
-NetworkManager-l2tp-gnome
-NetworkManager-libreswan-gnome
-NetworkManager-openvpn-gnome
-NetworkManager-pptp-gnome
-NetworkManager-strongswan-gnome
-NetworkManager-vpnc-gnome
 
 # DeskOS excluded packages
 -abrt*

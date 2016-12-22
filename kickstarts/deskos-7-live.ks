@@ -79,6 +79,7 @@ pcsc-lite
 pcsc-lite-ccid
 shutter
 subscription-manager
+thunderbird-extension-eds-calendar
 tmux
 unrar
 vim

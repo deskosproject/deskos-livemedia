@@ -97,6 +97,7 @@ vim
 -gnome-boxes
 -gnome-classic-session
 -gnome-disk-utility
+-gnome-packagekit*
 -gnome-system-log
 -gnome-tweak-tool
 -icedtea-web
